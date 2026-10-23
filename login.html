@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlanPro | Admin Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-body">
+  <main class="login-wrap"><section class="login-card">
+    <div class="brand-mark">P</div><h1>PlanPro</h1><p class="login-subtitle">Administrator Login</p>
+    {% if error %}<div class="login-error">{{ error }}</div>{% endif %}
+    <form method="POST" class="login-form">
+      <label for="username">Username</label><input id="username" name="username" type="text" placeholder="Enter username" autocomplete="username" required>
+      <label for="password">Password</label><input id="password" name="password" type="password" placeholder="Enter password" autocomplete="current-password" required>
+      <button type="submit" class="login-button">Login <span aria-hidden="true">→</span></button>
+    </form>
+  </section></main>
+</body></html>
