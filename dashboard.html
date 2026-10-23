@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PlanPro | Dashboard</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body class="app-body">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand"><div class="brand-mark small">P</div><div><strong>PlanPro</strong><small>EVENT CONTROL</small></div></div>
+    <div class="side-label">WORKSPACE</div>
+    <nav id="sideNav">
+      <button class="nav-item active" data-view="dashboard"> Dashboard</button>
+      <button class="nav-item" data-view="events"> Events</button>
+      <button class="nav-item" data-view="registrations"> Registrations & Tickets</button>
+      <button class="nav-item" data-view="vendors"> Vendors</button>
+      <button class="nav-item" data-view="resources"> Resources</button>
+      <button class="nav-item" data-view="budget"> Budget Tracking</button>
+      <button class="nav-item" data-view="sponsorships"> Sponsorships</button>
+      <button class="nav-item" data-view="emergency"> Emergency Center</button>
+      <button class="nav-item" data-view="reports"> Reports & Audit</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="user-chip"><div class="avatar">A</div><div><strong>{{ username }}</strong><small>Administrator</small></div></div><a class="logout-link" href="{{ url_for('logout') }}">↪ Logout</a></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar"><button id="mobileMenu" class="mobile-menu" aria-label="Toggle menu">☰</button><div><div class="eyebrow">EVENT MANAGEMENT / WORKSPACE</div><h2 id="pageTitle">Dashboard Overview</h2></div><div class="topbar-right"><span class="live-dot"></span><span>System active</span><span class="top-avatar">A</span></div></header>
+    <div id="toastHost" class="toast-host"></div><section id="viewRoot" class="content"></section>
+  </main>
+  <div id="modalRoot"></div><script src="{{ url_for('static', filename='script.js') }}"></script>
+</body></html>
